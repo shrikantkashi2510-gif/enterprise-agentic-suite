@@ -13,8 +13,8 @@ This suite is composed of three integrated flagship systems:
 | System | Role | Tech Stack | Status |
 | :--- | :--- | :--- | :--- |
 | **[Enterprise Context Mesh](./enterprise-context-mesh)** | **The Body** (Data Layer) | MCP, Python, PostgreSQL | ✅ v1.0 Released |
-| **[AI Ops Agent](./ai-ops-agent)** | **The Brain** (Orchestration) | LangGraph, Pydantic AI | 🚧 Active |
-| **[Eval Reliability Platform](./eval-platform)** | **The Conscience** (Audit) | Arize Phoenix, PyTest | 🚧 Active |
+| **[AI Ops Agent](./ai-ops-agent)** | **The Brain** (Orchestration) | LangGraph, Pydantic AI | ✅ v0.1.0 Released |
+| **[Eval Reliability Platform](./eval-platform)** | **The Conscience** (Audit) | Arize Phoenix, PyTest | ✅ v0.1.0 Released |
 
 ## 🏗️ High-Level Topology
 ```mermaid
