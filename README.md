@@ -18,7 +18,21 @@ This suite is composed of three integrated flagship systems:
 
 ## 🏗️ High-Level Topology
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#003366', 'edgeLabelBackground':'#ffffff', 'tertiaryColor': '#f4f4f4'}}}%%
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#01579b',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#81d4fa',
+    'lineColor': '#81d4fa',
+    'secondaryColor': '#003366',
+    'tertiaryColor': '#263238',
+    'clusterBkg': '#1a1a1a',
+    'clusterBorder': '#81d4fa',
+    'edgeLabelBackground':'#1a1a1a',
+    'nodeTextColor': '#ffffff'
+  }
+}}%%
 graph TD
     %% Define Nodes
     Client(["👤 Human / 🤖 Agentic Client"])
@@ -61,9 +75,9 @@ graph TD
     Log -->|"6. Grounded Response"| Client
 
     %% Styling
-    classDef secure fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
-    classDef legacy fill:#fff3e0,stroke:#e65100,stroke-width:2px;
-    classDef critical fill:#ffebee,stroke:#b71c1c,stroke-width:2px;
+    classDef secure fill:#0d47a1,stroke:#81d4fa,stroke-width:2px,color:#ffffff;
+    classDef legacy fill:#e65100,stroke:#ffb74d,stroke-width:2px,color:#ffffff;
+    classDef critical fill:#b71c1c,stroke:#ef9a9a,stroke-width:2px,color:#ffffff;
 
     class Ops,ECM,Eval secure;
     class SQL,API legacy;
