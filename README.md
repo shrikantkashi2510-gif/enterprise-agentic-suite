@@ -35,44 +35,45 @@ This suite is composed of three integrated flagship systems:
 }}%%
 graph TD
     %% Define Nodes
-    Client(["👤 Human / 🤖 Agentic Client"])
+    Client(["👤 Human / Agentic Client"])
 
-    subgraph "Governance & Orchestration Layer (The Brain)"
+    subgraph "Governance (The Brain)"
         Ops["🛡️ AI Ops Agent"]
         Auth{"🔐 Auth & Budget"}
     end
 
-    subgraph "Data Interoperability Layer (The Body)"
+    subgraph "Data (The Body)"
         ECM["🌐 Enterprise Context Mesh"]
         Router["🔀 MCP Router"]
     end
 
-    subgraph "Quality & Audit Layer (The Conscience)"
-        Eval["⚖️ Eval Reliability Platform"]
+    subgraph "Audit (The Conscience)"
+        Eval["⚖️ Eval Platform"]
         Log["📝 Audit Log (SIEM)"]
     end
 
-    subgraph "Legacy Enterprise Data"
-        SQL[("🛢️ PostgreSQL / ERP")]
+    subgraph "Legacy Data"
+        SQL[("🛢️ SQL / ERP")]
         API["☁️ Salesforce / CRM"]
     end
 
-    %% Define Relationships
-    Client -->|"1. Intent Request"| Ops
+    %% Optimized Flow
+    Client --> Ops
     Ops --> Auth
+    
     Auth -->|"Approved"| ECM
-    Auth --x|"Denied"| Client
+    Auth -->|"Denied"| Client
 
     ECM --> Router
-    Router -->|"Read-Only SQL"| SQL
-    Router -->|"Secure Proxy"| API
+    Router --> SQL
+    Router --> API
 
-    SQL -->|"Raw Data"| Router
-    API -->|"JSON Payload"| Router
+    SQL --> Router
+    API --> Router
 
-    Router -->|"5. Verify Context"| Eval
-    Eval -->|"Drift Check Passed"| Log
-    Log -->|"6. Grounded Response"| Client
+    Router --> Eval
+    Eval --> Log
+    Log -->|"Grounded Response"| Client
 
     %% Styling
     classDef secure fill:#0d47a1,stroke:#81d4fa,stroke-width:2px,color:#ffffff;
