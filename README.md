@@ -21,44 +21,44 @@ This suite is composed of three integrated flagship systems:
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#003366', 'edgeLabelBackground':'#ffffff', 'tertiaryColor': '#f4f4f4'}}}%%
 graph TD
     %% Define Nodes
-    Client([👤 Human / 🤖 Agentic Client])
+    Client(["👤 Human / 🤖 Agentic Client"])
 
     subgraph "Governance & Orchestration Layer (The Brain)"
-        Ops[🛡️ AI Ops Agent]
-        Auth{🔐 Auth & Budget}
+        Ops["🛡️ AI Ops Agent"]
+        Auth{"🔐 Auth & Budget"}
     end
 
     subgraph "Data Interoperability Layer (The Body)"
-        ECM[🌐 Enterprise Context Mesh]
-        Router[🔀 MCP Router]
+        ECM["🌐 Enterprise Context Mesh"]
+        Router["🔀 MCP Router"]
     end
 
     subgraph "Quality & Audit Layer (The Conscience)"
-        Eval[⚖️ Eval Reliability Platform]
-        Log[📝 Audit Log (SIEM)]
+        Eval["⚖️ Eval Reliability Platform"]
+        Log["📝 Audit Log (SIEM)"]
     end
 
     subgraph "Legacy Enterprise Data"
-        SQL[(🛢️ PostgreSQL / ERP)]
-        API[☁️ Salesforce / CRM]
+        SQL[("🛢️ PostgreSQL / ERP")]
+        API["☁️ Salesforce / CRM"]
     end
 
-    %% Relationships
-    Client -->|1. Intent Request| Ops
+    %% Define Relationships
+    Client -->|"1. Intent Request"| Ops
     Ops --> Auth
-    Auth -->|Approved| ECM
-    Auth --x|Denied| Client
+    Auth -->|"Approved"| ECM
+    Auth --x|"Denied"| Client
 
     ECM --> Router
-    Router -->|Read-Only SQL| SQL
-    Router -->|Secure Proxy| API
+    Router -->|"Read-Only SQL"| SQL
+    Router -->|"Secure Proxy"| API
 
-    SQL -->|Raw Data| Router
-    API -->|JSON Payload| Router
+    SQL -->|"Raw Data"| Router
+    API -->|"JSON Payload"| Router
 
-    Router -->|5. Verify Context| Eval
-    Eval -->|Drift Check Passed| Log
-    Log -->|6. Grounded Response| Client
+    Router -->|"5. Verify Context"| Eval
+    Eval -->|"Drift Check Passed"| Log
+    Log -->|"6. Grounded Response"| Client
 
     %% Styling
     classDef secure fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
@@ -68,7 +68,7 @@ graph TD
     class Ops,ECM,Eval secure;
     class SQL,API legacy;
     class Auth critical;
-```mermaid
+```
 
 ## 💼 Consulting & Advisory
 Designed by **[Shrikant Kashi]**, Principal AI Systems Architect.
