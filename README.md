@@ -71,3 +71,11 @@ graph TD
 ## 💼 Consulting & Advisory
 Designed by **[Shrikant Kashi]**, Principal AI Systems Architect.
 *Specializing in $50M+ Enterprise AI Transformations.*
+
+## ⚖️ License & Commercial Use
+This architectural blueprint is open-source under the **MIT License**.
+
+**Advisory Services:**
+While the code is free, implementing this architecture securely at scale requires enterprise customization.
+For **Advisory & Integration Services** (Custom Adapters, SOC2 Compliance, On-Prem Deployment), please contact:
+**[www.linkedin.com/in/shrikant-kashi-488448159]**
